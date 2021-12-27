@@ -18,7 +18,7 @@ export default function register() {
 					</div>
 
 					{/* RIGHT SIDE */}
-					<div className='bg-teal-600 image' style={{ backgroundImage: 'url(/register-image.png)' }}></div>
+					<div className='bg-teal-600 image' style={{ backgroundImage: 'url(/register-image.webp)' }}></div>
 				</div>
 			</div>
 		</>
