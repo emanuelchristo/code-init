@@ -10,7 +10,7 @@ export default function SexInput({ value, onChange, error }) {
 	return (
 		<fieldset>
 			<label className='text-sm'>Sex</label>
-			<div className='flex items-center gap-4 py-2'>
+			<div className='flex items-center gap-x-4 gap-y-2 py-2 flex-wrap'>
 				<div className='flex items-center gap-2'>
 					<input type='radio' id='male' name='sex' value='male' checked={checked == 'male'} onChange={onChange} />
 					<label htmlFor='male'>Male</label>
