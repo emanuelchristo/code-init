@@ -30,7 +30,7 @@ export default function contact() {
 					</div>
 
 					{/* RIGHT SIDE */}
-					<div className='bg-blue-600 image'></div>
+					<div className='bg-blue-600 image' style={{ backgroundImage: 'url(/contact-image.png)' }}></div>
 				</div>
 			</div>
 		</>

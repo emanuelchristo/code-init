@@ -44,7 +44,7 @@ export default function index() {
 					</div>
 
 					{/* RIGHT SIDE */}
-					<div className='bg-violet-600 image'></div>
+					<div className='bg-violet-600 image' style={{ backgroundImage: 'url(/home-image.png)' }}></div>
 				</div>
 			</div>
 		</>
