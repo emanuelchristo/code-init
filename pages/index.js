@@ -39,7 +39,7 @@ export default function index() {
 						</div>
 
 						<Link href='/register' passHref>
-							<button className='bg-black text-white w-36 h-14'>Register_</button>
+							<button className='bg-black text-white w-36 h-14 hover:bg-violet-700 active:bg-violet-800'>Register_</button>
 						</Link>
 					</div>
 

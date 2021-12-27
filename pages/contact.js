@@ -8,7 +8,7 @@ export default function contact() {
 			</Head>
 			<div className='flex flex-col justify-center min-h-screen sm:min-h-fit'>
 				<div className='h-20 shrink-0'></div>
-				<div className='content w-full min-h-fit gap-12 py-12 flex items-center justify-between md:flex-col'>
+				<div className='content w-full min-h-fit gap-12 py-12 flex items-center justify-between md:flex-col-reverse md:pt-6 md:gap-8'>
 					{/* LEFT SIDE */}
 					<div className='flex flex-col gap-14 w-1/2 md:w-full  sm:gap-10'>
 						<h1 className='text-7xl font-semibold lg:text-6xl sm:text-5xl'>contact_</h1>
