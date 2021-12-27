@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { socialLinks } from 'lib/constants'
 
 import Link from 'next/link'
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa'
@@ -24,7 +25,7 @@ export default function Navbar() {
 	const [showMenu, setShowMenu] = useState(false)
 
 	return (
-		<nav className='fixed w-screen  bg-white flex items-center justify-between px-12 h-20 border-b border-gray-200 md:px-6'>
+		<nav className='fixed w-screen  bg-white flex items-center justify-between px-12 h-20 border-b border-gray-200 lg:px-8 md:px-6'>
 			<Link href='/' passHref>
 				<img src='/logo.svg' className='h-9 cursor-pointer'></img>
 			</Link>
@@ -39,7 +40,7 @@ export default function Navbar() {
 				<li>
 					<a
 						className='text-2xl hover:text-violet-600 active:text-black cursor-pointer'
-						href='http://facebook.com'
+						href={socialLinks?.facebook}
 						target='_blank'
 						rel='noreferrer noopener'
 					>
@@ -49,7 +50,7 @@ export default function Navbar() {
 				<li>
 					<a
 						className='text-2xl hover:text-violet-600 active:text-black cursor-pointer'
-						href='http://instagram.com'
+						href={socialLinks?.instagram}
 						target='_blank'
 						rel='noreferrer noopener'
 					>

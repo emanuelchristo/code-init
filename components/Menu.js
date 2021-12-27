@@ -1,3 +1,5 @@
+import { socialLinks } from 'lib/constants'
+
 import Link from 'next/link'
 import { IoMdClose } from 'react-icons/io'
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa'
@@ -41,7 +43,7 @@ export default function Menu({ show, onClose }) {
 					<li>
 						<a
 							className='text-2xl hover:text-violet-600 active:text-black cursor-pointer'
-							href='http://facebook.com'
+							href={socialLinks?.facebook}
 							target='_blank'
 							rel='noreferrer noopener'
 						>
@@ -51,7 +53,7 @@ export default function Menu({ show, onClose }) {
 					<li>
 						<a
 							className='text-2xl hover:text-violet-600 active:text-black cursor-pointer'
-							href='http://instagram.com'
+							href={socialLinks?.instagram}
 							target='_blank'
 							rel='noreferrer noopener'
 						>

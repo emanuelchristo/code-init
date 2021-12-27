@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
+import { HACKATHON_START } from 'lib/constants'
 
 import Head from 'next/head'
 import Link from 'next/link'
-
-const HACKATHON_START = new Date('2022-01-05T13:30:00.000Z') // 5 Jan 2022, 7:00PM
 
 export default function index() {
 	const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
@@ -33,7 +32,7 @@ export default function index() {
 	return (
 		<>
 			<Head>
-				<title>Code.Init() - Hackathon organized by CSEA, NITC</title>
+				<title>Code.Init() - Hackathon organized by CSEA, NIT Calicut</title>
 			</Head>
 			<div className='flex flex-col justify-center min-h-screen sm:min-h-fit'>
 				<div className='h-20 shrink-0'></div>
@@ -45,7 +44,7 @@ export default function index() {
 								3 Day
 								<br /> Hackathon
 							</h1>
-							<h3 className='text-xl'>Organized by CSEA, NITC</h3>
+							<h3 className='text-xl text-gray-400'>Organized by CSEA, NIT Calicut</h3>
 						</div>
 
 						<div className='flex flex-col gap-4'>
