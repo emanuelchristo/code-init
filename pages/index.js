@@ -3,6 +3,7 @@ import { HACKATHON_START } from 'lib/constants'
 
 import Head from 'next/head'
 import Link from 'next/link'
+import ParticipantTable from 'components/ParticipantTable'
 
 export default function index() {
 	const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
@@ -74,6 +75,7 @@ export default function index() {
 					<div className='bg-violet-600 image' style={{ backgroundImage: 'url(/home-image.png)' }}></div>
 				</div>
 			</div>
+			<ParticipantTable />
 		</>
 	)
 }
