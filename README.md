@@ -4,7 +4,7 @@ Registration website for Code.Init() hackathon organized by CSEA, NIT Calicut
 
 ### [✨ Demo](https://code-init.netlify.app/)
 
-## Build Setup
+## ⚒️ Build Setup
 
 ```bash
 # install dependencies
@@ -20,12 +20,16 @@ $ npm run build
 $ npm run start
 ```
 
-## Tech Stack
+## 🌳 Environment Variables
+
+`FIREBASE_CONFIG` Stringifed firebase config object converted to a base64 string
+
+## 💿 Tech Stack
 
 -   Next.js
 -   Tailwind CSS
 -   Firebase
 
-## Developer
+## 🧑‍💻 Developer
 
 [Emanuel Christo](https://github.com/emanuelchristo)
