@@ -1,7 +1,35 @@
+import { useState, useEffect } from 'react'
+
 import Head from 'next/head'
 import Link from 'next/link'
 
+const HACKATHON_START = new Date('2022-01-05T13:30:00.000Z') // 5 Jan 2022, 7:00PM
+
 export default function index() {
+	const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+
+	useEffect(() => {
+		countdown()
+	}, [])
+
+	function countdown() {
+		setInterval(() => {
+			let dateFuture = HACKATHON_START
+			let dateNow = new Date()
+
+			let seconds = Math.floor((dateFuture - dateNow) / 1000)
+			let minutes = Math.floor(seconds / 60)
+			let hours = Math.floor(minutes / 60)
+			let days = Math.floor(hours / 24)
+
+			hours = hours - days * 24
+			minutes = minutes - days * 24 * 60 - hours * 60
+			seconds = seconds - days * 24 * 60 * 60 - hours * 60 * 60 - minutes * 60
+
+			setTimeLeft({ days, hours, minutes, seconds })
+		}, 1000)
+	}
+
 	return (
 		<>
 			<Head>
@@ -21,19 +49,19 @@ export default function index() {
 						</div>
 
 						<div className='flex flex-col gap-4'>
-							<p className='font-medium text-violet-600'>Registration ends in</p>
+							<p className='font-medium text-violet-600'>Hackthon starts in</p>
 							<div className='flex gap-4 font-medium flex-wrap'>
 								<p className='whitespace-nowrap'>
-									<span className='text-4xl sm:text-3xl'>5</span> days
+									<span className='text-4xl sm:text-3xl'>{timeLeft.days}</span> days
 								</p>
 								<p className='whitespace-nowrap'>
-									<span className='text-4xl sm:text-3xl'>09</span> hours
+									<span className='text-4xl sm:text-3xl'>{timeLeft.hours}</span> hours
 								</p>
 								<p className='whitespace-nowrap'>
-									<span className='text-4xl sm:text-3xl'>32</span> mins
+									<span className='text-4xl sm:text-3xl'>{timeLeft.minutes}</span> mins
 								</p>
 								<p className='whitespace-nowrap'>
-									<span className='text-4xl sm:text-3xl'>02</span> sec
+									<span className='text-4xl sm:text-3xl'>{timeLeft.seconds}</span> sec
 								</p>
 							</div>
 						</div>
