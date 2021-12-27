@@ -88,7 +88,10 @@ export default function RegForm() {
 			/>
 			<SexInput value={form?.sex} onChange={handleChange} error={formErrors?.sex} />
 			{hasErrors && <p className='text-red-600'>Form has some errors</p>}
-			<button className='flex items-center justify-center gap-2 bg-black text-white  w-36 h-14 hover:bg-violet-700 active:bg-violet-800'>
+			<button
+				className='flex items-center justify-center gap-2 bg-black text-white  w-36 h-14 hover:bg-violet-700 active:bg-violet-800'
+				disabled={loading}
+			>
 				{loading && <CgSpinner className='text-white text-2xl animate-spin mt-px' />}
 				Register
 			</button>
